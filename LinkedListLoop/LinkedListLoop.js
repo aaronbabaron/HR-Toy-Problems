@@ -17,11 +17,11 @@ Your function should return a boolean value
 var Node = function(value) {
   this.value = value;
   this.next = null;
-}
+};
 
 var LinkedList = function() {
   this.head = null;
-}
+};
 
 LinkedList.prototype.addToTail = function(value) {
   if (this.head === null) {
@@ -38,7 +38,15 @@ LinkedList.prototype.addToTail = function(value) {
 //YOUR FUNCTION HERE
 
 LinkedList.prototype.hasLoop = function() {
+  var temp = this.head;
+  while (temp !== null) {
+    if (temp.visited) 
+      return true;
 
+    temp.visited = true; 
+    temp = temp.next;
+  }
+  return false;
 };
 
 

@@ -1,3 +1,4 @@
+/* jshint esversion: 6 */
 /*
 Let’s consider K-based numbers, containing exactly N digits.
 We define a number to be valid if its K-based notation doesn’t
@@ -21,7 +22,10 @@ e.g. KNumbers(11,3) === 1200
 //YOUR CODE HERE
 
 var KNumbers = function(K, N) {
-  
+  // numbers that dont have leading zeros
+  // (k - 1) * k^(n-1)
+  // (n - 1) - # consec zeros = num positions
+  var nDigitNums = (K - 1) * Math.pow(K, (N-1)); 
 };
 
 module.exports = KNumbers;

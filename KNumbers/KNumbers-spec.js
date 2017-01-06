@@ -1,3 +1,4 @@
+/* jshint esversion: 6*/
 const KNumbers = require('./KNumbers.js');
 const expect = require('chai').expect;
 
@@ -25,4 +26,4 @@ describe('KNumbers', () => {
     expect(big).to.equal(6.948918391790005e+29);
     done();
   });
-})
+});
